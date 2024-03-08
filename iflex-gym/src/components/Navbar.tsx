@@ -23,9 +23,9 @@ export default function Navbar() {
         </ul>
       </nav>
       {/* for small screens */}
-      <div>
+      <div className="md:hidden">
         {openNav ? (
-          <nav className=" lg:hidden flex items-start flex-col py-4 justify-between lg:py-8">
+          <nav className=" md:hidden flex items-start flex-col py-4 justify-between  lg:py-8">
             <Link to="#home" className="flex-row flex justify-between w-full">
               <span className="lg:text-4xl font-serif font-semibold text-red-600">
                 IFLEX GYM
