@@ -11,11 +11,11 @@ export default function Navbar() {
       {/* for large screens */}
       <nav className=" hidden lg:flex justify-between py-4 items-center lg:py-8">
         <Link to="#home">
-          <span className="lg:text-4xl font-serif font-semibold text-red-600">
-            IFLEX GYM
+          <span className="lg:text-4xl font-serif font-semibold text-white">
+            IFLEX FITNESS GYM
           </span>
         </Link>
-        <ul className="flex flex-row  lg:gap-6">
+        <ul className="flex flex-row  lg:gap-6 text-white font-serif text-[16px] font-medium uppercase">
           <Link to="#home">Home</Link>
           <Link to="#about">About</Link>
           <Link to="#services">Services</Link>
