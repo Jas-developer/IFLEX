@@ -1,6 +1,8 @@
 import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
+import { TfiAlignJustify } from "react-icons/tfi";
+import { TfiAlignLeft } from "react-icons/tfi";
 type navOpen = true | false;
 
 export default function Navbar() {
@@ -23,25 +25,36 @@ export default function Navbar() {
         </ul>
       </nav>
       {/* for small screens */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         {openNav ? (
-          <nav className=" md:hidden flex items-start flex-col py-4 justify-between  lg:py-8">
+          <nav className=" md:hidden flex items-end flex-col py-4 relative justify-between lg:py-8 ">
             <Link to="#home" className="flex-row flex justify-between w-full">
               <span className="lg:text-4xl font-serif font-semibold text-red-600">
                 IFLEX GYM
               </span>
               <button
                 onClick={() => setOpenNav(openNav === true ? false : true)}
+                className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 "
               >
-                Close
+                <TfiAlignLeft />
               </button>
             </Link>
-            <ul className="flex lg:hidden flex-col  lg:gap-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className="flex absolute top-10 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
+            >
               <Link to="#home">Home</Link>
               <Link to="#about">About</Link>
               <Link to="#services">Services</Link>
               <Link to="#contact">Contact</Link>
-            </ul>
+            </motion.div>
           </nav>
         ) : (
           <div className="flex justify-between items-center py-4">
@@ -50,8 +63,9 @@ export default function Navbar() {
             </span>
             <button
               onClick={() => setOpenNav(openNav === false ? true : false)}
+              className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
             >
-              Open
+              <TfiAlignJustify />
             </button>
           </div>
         )}
