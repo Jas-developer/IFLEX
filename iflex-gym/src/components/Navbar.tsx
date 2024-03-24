@@ -2,7 +2,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { TfiAlignJustify } from "react-icons/tfi";
-import { TfiAlignLeft } from "react-icons/tfi";
+import { IoMdClose } from "react-icons/io";
 type navOpen = true | false;
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
                 onClick={() => setOpenNav(openNav === true ? false : true)}
                 className="transition ease-in-out delay-150  hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-90 flex  items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-red-400 "
               >
-                <TfiAlignLeft width={500} height={200} />
+                <IoMdClose width={500} height={200} />
               </button>
             </Link>
             <motion.div
