@@ -34,9 +34,9 @@ export default function Navbar() {
               </span>
               <button
                 onClick={() => setOpenNav(openNav === true ? false : true)}
-                className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 "
+                className="transition ease-in-out delay-150 rounded-tl-xl rounded-br-xl hover:-translate-y-1 hover:scale-90 flex items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-red-400 "
               >
-                <TfiAlignLeft />
+                <TfiAlignLeft width={500} height={200} />
               </button>
             </Link>
             <motion.div
@@ -48,7 +48,7 @@ export default function Navbar() {
                 hidden: { opacity: 0, x: -100 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="flex absolute top-10 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
+              className="flex absolute top-14 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
             >
               <Link to="#home">Home</Link>
               <Link to="#about">About</Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
             </span>
             <button
               onClick={() => setOpenNav(openNav === false ? true : false)}
-              className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+              className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-110 flex items-center justify-center duration-300 w-[2rem] h-[2rem] bg-red-400"
             >
               <TfiAlignJustify />
             </button>
