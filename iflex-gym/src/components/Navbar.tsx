@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { IoMdClose } from "react-icons/io";
+
 type navOpen = true | false;
 
 export default function Navbar() {
@@ -11,13 +12,13 @@ export default function Navbar() {
   return (
     <>
       {/* for large screens */}
-      <nav className=" hidden lg:flex justify-between py-4 items-center lg:py-8">
+      <nav className=" hidden lg:flex justify-between py-2 items-center lg:py-8 ">
         <Link to="#home">
-          <span className="lg:text-4xl font-serif font-semibold text-white">
-            IFLEX FITNESS GYM
-          </span>
+          <p className="text-white md:text-5xl md:font-semibold">
+            i. <span className="text-red-600">Flex</span>
+          </p>
         </Link>
-        <ul className="flex flex-row  lg:gap-6 text-white font-serif text-[16px] font-medium uppercase">
+        <ul className="flex flex-row  lg:gap-6 text-white font-serif text-[16px] font-medium uppercase bg-green-600 rounded-br-xl rounded-tl-xl md:py-4 md:px-4">
           <Link to="#home">Home</Link>
           <Link to="#about">About</Link>
           <Link to="#services">Services</Link>
@@ -29,12 +30,12 @@ export default function Navbar() {
         {openNav ? (
           <nav className="  md:hidden  flex items-end flex-col py-4 relative justify-between lg:py-8 ">
             <Link to="#home" className="flex-row flex justify-between w-full">
-              <span className="lg:text-4xl font-serif font-semibold text-red-600">
-                IFLEX GYM
-              </span>
+              <p className="text-white text-2xl md:text-5xl md:font-semibold">
+                i. <span className="text-red-600">Flex</span>
+              </p>
               <button
                 onClick={() => setOpenNav(openNav === true ? false : true)}
-                className="transition ease-in-out delay-150  hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-90 flex  items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-red-400 "
+                className="transition ease-in-out delay-150  hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-90 flex  items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-green-600 text-white"
               >
                 <IoMdClose width={500} height={200} />
               </button>
@@ -48,7 +49,7 @@ export default function Navbar() {
                 hidden: { opacity: 0, x: -100 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="flex absolute mt-10 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
+              className="flex absolute mt-10 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-red-600"
             >
               <Link to="#home">Home</Link>
               <Link to="#about">About</Link>
@@ -58,12 +59,12 @@ export default function Navbar() {
           </nav>
         ) : (
           <div className="flex justify-between items-center py-4">
-            <span className="lg:text-4xl font-serif font-semibold text-red-600">
-              IFLEX GYM
-            </span>
+            <p className="text-white text-2xl md:text-5xl md:font-semibold">
+              i. <span className="text-red-600">Flex</span>
+            </p>
             <button
               onClick={() => setOpenNav(openNav === false ? true : false)}
-              className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-110 flex items-center justify-center duration-300 w-[2rem] h-[2rem] bg-red-400"
+              className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-110 flex items-center justify-center duration-300 w-[2rem] h-[2rem] bg-green-600 text-white"
             >
               <TfiAlignJustify />
             </button>

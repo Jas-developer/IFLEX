@@ -5,12 +5,19 @@ import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import LandingPage from "./sections/LandingPage";
 // background image
-
+import BackgroundImage from "./assets/backgroundImages/Gym.jpg";
 export default function App() {
   return (
     <BrowserRouter>
       <main className="">
-        <div className="w-full bg-cover bg-center h-[90vh] bg-gray-100  bg-no-repeat">
+        <div
+          style={{
+            backgroundImage: `url(${BackgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="w-full bg-cover bg-center h-[90vh] bg-gray-100  bg-no-repeat"
+        >
           <div className="px-4 h-full flex flex-col justify-between">
             <Navbar />
             <div className="h-[100%] flex items-center">
