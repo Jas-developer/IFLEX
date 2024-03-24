@@ -18,11 +18,11 @@ export default function LandingPage() {
           WELCOME TO IFLEX FITNESS <br />
           GYM
         </h1>
-        <span className="text-white text-lg font-normal">
+        <span className="text-gray-900 text-lg font-normal">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </span>
         <div>
-          <button className="text-white font-normal shadow-md md:text-md bg-green-600 px-6 py-2 rounded-tl-xl rounded-br-xl">
+          <button className="text-white transition-all hover:scale-110 duration-500 font-normal shadow-md md:text-md bg-green-600 px-6 py-2 rounded-tl-xl rounded-br-xl">
             Contact Us
           </button>
         </div>

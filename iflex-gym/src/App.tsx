@@ -10,7 +10,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <main className="">
-        <div className="w-full bg-cover bg-center h-[90vh] bg-gray-400  bg-no-repeat">
+        <div className="w-full bg-cover bg-center h-[90vh] bg-gray-100  bg-no-repeat">
           <div className="px-4 h-full flex flex-col justify-between">
             <Navbar />
             <div className="h-[100%] flex items-center">
