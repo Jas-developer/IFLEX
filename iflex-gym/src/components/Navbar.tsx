@@ -27,7 +27,7 @@ export default function Navbar() {
       {/* for small screens */}
       <div className="md:hidden ">
         {openNav ? (
-          <nav className="  md:hidden mt-4 flex items-end flex-col py-4 relative justify-between lg:py-8 ">
+          <nav className="  md:hidden  flex items-end flex-col py-4 relative justify-between lg:py-8 ">
             <Link to="#home" className="flex-row flex justify-between w-full">
               <span className="lg:text-4xl font-serif font-semibold text-red-600">
                 IFLEX GYM
@@ -48,7 +48,7 @@ export default function Navbar() {
                 hidden: { opacity: 0, x: -100 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="flex absolute top-14 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
+              className="flex absolute mt-10 w-[50%] py-2 lg:hidden gap-4 rounded-br-[2rem] rounded-tl-[2rem] text-white flex-col justify-end items-center  lg:gap-6 bg-green-400"
             >
               <Link to="#home">Home</Link>
               <Link to="#about">About</Link>
