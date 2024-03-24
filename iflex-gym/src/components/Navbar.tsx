@@ -18,7 +18,7 @@ export default function Navbar() {
             i. <span className="text-red-600">Flex</span>
           </p>
         </Link>
-        <ul className="flex flex-row  lg:gap-6 text-white font-serif text-[16px] font-medium uppercase bg-green-600 rounded-br-xl rounded-tl-xl md:py-4 md:px-4">
+        <ul className="flex flex-row  lg:gap-6 text-white font-serif text-[16px] font-medium uppercase bg-red-600 rounded-br-xl rounded-tl-xl md:py-4 md:px-4">
           <Link to="#home">Home</Link>
           <Link to="#about">About</Link>
           <Link to="#services">Services</Link>
