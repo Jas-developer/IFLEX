@@ -27,14 +27,14 @@ export default function Navbar() {
       {/* for small screens */}
       <div className="md:hidden ">
         {openNav ? (
-          <nav className=" md:hidden flex items-end flex-col py-4 relative justify-between lg:py-8 ">
+          <nav className="  md:hidden mt-4 flex items-end flex-col py-4 relative justify-between lg:py-8 ">
             <Link to="#home" className="flex-row flex justify-between w-full">
               <span className="lg:text-4xl font-serif font-semibold text-red-600">
                 IFLEX GYM
               </span>
               <button
                 onClick={() => setOpenNav(openNav === true ? false : true)}
-                className="transition ease-in-out delay-150 rounded-tl-xl rounded-br-xl hover:-translate-y-1 hover:scale-90 flex items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-red-400 "
+                className="transition ease-in-out delay-150  hover:-translate-y-1 rounded-tl-xl rounded-br-xl hover:scale-90 flex  items-center justify-center  duration-300 w-[2rem] h-[2rem] bg-red-400 "
               >
                 <TfiAlignLeft width={500} height={200} />
               </button>
